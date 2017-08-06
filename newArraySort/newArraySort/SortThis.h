@@ -30,6 +30,7 @@
 //	}
 //}
 
+
 template <class T> void sortThis(T *array, unsigned first, unsigned last)
 {
 	unsigned left = first;
