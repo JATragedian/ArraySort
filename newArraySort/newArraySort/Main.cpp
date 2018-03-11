@@ -2,7 +2,7 @@
 #include <ctime>
 #include "SortThis.h"
 
-#define SIZE 3854
+#define SIZE 10
 
 int main()
 {
@@ -28,3 +28,4 @@ int main()
 
 	return 0;
 }
+

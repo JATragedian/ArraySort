@@ -3,11 +3,18 @@
 
 template <class T> void sortThis(T *array, unsigned first, unsigned last)
 {
+	unsigned size = 10;
 	unsigned left = first;
 	unsigned right = last;
-	T *mid = &array[(left + right) / 2];
+	unsigned midIndex = (left + right) / 2;
+	T *mid = &array[midIndex];
 
-	while (left <= right) {
+	for (unsigned i = 0; i < size; i++) {
+		std::cout << array[i] << ' ';
+	}
+	std::cout << '\n';
+
+	while (left <= right && left < midIndex && right > midIndex){
 		while (array[left] < *mid) {
 			left++;
 		}
@@ -18,6 +25,10 @@ template <class T> void sortThis(T *array, unsigned first, unsigned last)
 
 		if (left <= right) {
 			std::swap(array[left++], array[right--]);
+			for (unsigned i = 0; i < size; i++) {
+				std::cout << array[i] << ' ';
+			}
+			std::cout << '\n';
 		}
 	}
 
